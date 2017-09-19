@@ -1,5 +1,7 @@
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -9,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class DqExpressCustomerClient 
 {
 	private final String CUSTOMER_SERVICE_MODULE_EXECUTION_URL = "https://<change me>/api/v1/modules/";
+	private final String SESSION_ID_HEADER_NAME = "SessionId";
 	
     /**
      * Gets or sets the access token which is used for authorization.
@@ -34,7 +37,7 @@ public class DqExpressCustomerClient
      * @param moduleName The name of the module to execute
      * @param inputData The module data structure which should be passed to the workflow module
      * @param sessionId The optional session id. We can get a session id by executing a module. 
-     * The session id is used to execute similar modules. For example if you call an address suggesst five times with the same address, you only have to pay once.</param>
+     * The session id is used to execute similar modules. For example if you call an address suggest five times with the same address, you only have to pay once.</param>
      * @return Returns the result of the module execution.
      */
 	public ExecuteModuleResult executeModule(String moduleName, ExecuteModuleInputData inputData, String sessionId) throws Exception
@@ -64,6 +67,15 @@ public class DqExpressCustomerClient
     		throw new Exception("Something went wrong... Handle your error.");
     	}
     
-    	return mapper.readValue(connection.getInputStream(), ExecuteModuleResult.class);
+    	ExecuteModuleResult result =  mapper.readValue(connection.getInputStream(), ExecuteModuleResult.class);
+    	
+    	String sessionIdHeader = connection.getHeaderField(SESSION_ID_HEADER_NAME);
+    	if(sessionId != null) 
+    	{
+    		result.setSessionId(sessionIdHeader);
+    	}
+    	
+    	
+    	return result;
 	}
 }

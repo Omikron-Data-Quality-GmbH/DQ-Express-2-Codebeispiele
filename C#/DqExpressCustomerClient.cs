@@ -16,6 +16,7 @@ namespace DqExpressCustomerClientExample
     {
         private const string CustomerServiceModuleExecutionUrl = "https://<change me>/api/v1/modules";
         private const string JsonMediaType = "application/json";
+        private const string SessionIdHeaderName = "SessionId";
 
         /// <summary>
         /// Gets or sets the access token which is used for authorization.
@@ -54,9 +55,10 @@ namespace DqExpressCustomerClientExample
             var jsonResult = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<ExecuteModuleResult>(jsonResult);
 
-            if (response.Headers.TryGetValues(sessionId, out var headerValues))
+            var sessionHeader = response.Headers.FirstOrDefault(header => header.Key.Equals(SessionIdHeaderName, StringComparison.OrdinalIgnoreCase)).Value?.FirstOrDefault();
+            if (sessionHeader != null)
             {
-                result.SessionId = headerValues.First();
+                result.SessionId = sessionHeader;
             }
 
             return result;
