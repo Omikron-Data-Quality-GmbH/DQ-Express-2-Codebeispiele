@@ -19,8 +19,8 @@ Damit die Beispiele verwendet werden können, müssen folgende Parameter entspre
 | ------ | ------ |
 | OAuth Client Id | Eine eindeutige Id des Clients. Client Id und Secret dienen zur Autorisierung des Clients. Nur vertraute Clients können die DQ Express 2 Api verwenden. |
 | OAuth Client Secret | Ein eindeutiges Kennwort des Clients. Client Id und Secret dienen zur Autorisierung des Clients. Nur vertraute Clients können die DQ Express 2 Api verwenden.|
-| Authorization Service Url | Apiendpunkt der Autorisierung |
-| Customer Service Module Execution Url | Apiendpunkt des Moduleservices |
+| Authorization Service Url | API-Endpunkt der Autorisierung |
+| Customer Service Module Execution Url | API-Endpunkt des Moduleservices |
 | Username | Persönlicher Benutzername |
 | Password | Persönliches Passwort |
 
