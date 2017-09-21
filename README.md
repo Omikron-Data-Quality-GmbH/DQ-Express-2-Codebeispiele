@@ -3,7 +3,7 @@
 ## Allgemein
 
 Diese Codebeispiele sollen den generellen Kommunikationsweg für DQ Express 2 in mehreren Programmiersprachen demonstrieren.
-Zu beachten ist jedoch, dass die hier gezeigten Beispiele lediglich zur Demonstration geeignet sind. Bevor der Beispielcode in ein Produtivsystem umgesetzt wird, sollte dieser ausgiebig evaluiert werden.
+Zu beachten ist jedoch, dass die hier gezeigten Beispiele lediglich zur Demonstration geeignet sind. Bevor der Beispielcode auf einem Produktivstem umgesetzt wird, sollte dieser ausgiebig evaluiert werden.
 
 Folgende Programmiersprachen sind als Beispiel vorhanden:
 * [C#](https://github.com/OmikronDataQualityGmbH/DQ-Express-2-Codebeispiele/tree/master/C%23)
@@ -17,11 +17,13 @@ Damit die Beispiele verwendet werden können, müssen folgende Parameter entspre
 
 | Parameter | Bedeutung |
 | ------ | ------ |
-| OAuth Client Id | Eine eindeutige Id des Clients. Client Id und Secret dienen zur authorisierung des Clients. Nur vertraute Clients können die DQ Express 2 Api verwenden. |
-| OAuth Client Secret | Ein endeutiges Kennwort des Clients. Client Id und Secret dienen zur authorisierung des Clients. Nur vertraute Clients können die DQ Express 2 Api verwenden.|
+| OAuth Client Id | Eine eindeutige Id des Clients. Client Id und Secret dienen zur Autorisierung des Clients. Nur vertraute Clients können die DQ Express 2 Api verwenden. |
+| OAuth Client Secret | Ein eindeutiges Kennwort des Clients. Client Id und Secret dienen zur Autorisierung des Clients. Nur vertraute Clients können die DQ Express 2 Api verwenden.|
 | Authorization Service Url | Apiendpunkt der Autorisierung |
 | Customer Service Module Execution Url | Apiendpunkt des Moduleservices |
 | Username | Persönlicher Benutzername |
 | Password | Persönliches Passwort |
 
 Die genannten Parameter werden Ihnen dann von uns zur Verfügung gestellt.
+
+**Wichtig:** Die Client Id, der Client Secret sowie Ihre persönlichen Anmeldedaten dürfen niemals ungeschützt der Öffentlichkeit zur Verfügung gestellt werden. Jeder der diese Daten einsehen kann, kann Ihre gebuchten Transaktionen verbrauchen. Deswegen sollte zum Beispiel der Anmeldeprozess und am besten auch die Modulausführung nicht in Javascript ausgeführt werden, wenn dieser von Dritten eingesehen werden kann.
