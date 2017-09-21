@@ -6,10 +6,10 @@ Diese Codebeispiele sollen den generellen Kommunikationsweg für DQ Express 2 in
 Zu beachten ist jedoch, dass die hier gezeigten Beispiele lediglich zur Demonstration geeignet sind. Bevor der Beispielcode auf einem Produktivstem umgesetzt wird, sollte dieser ausgiebig evaluiert werden.
 
 Folgende Programmiersprachen sind als Beispiel vorhanden:
-* [C#](https://github.com/OmikronDataQualityGmbH/DQ-Express-2-Codebeispiele/tree/master/C%23)
-* [Java](https://github.com/OmikronDataQualityGmbH/DQ-Express-2-Codebeispiele/tree/master/Java)
-* [Javascript](https://github.com/OmikronDataQualityGmbH/DQ-Express-2-Codebeispiele/tree/master/Javascript)
-* [PHP](https://github.com/OmikronDataQualityGmbH/DQ-Express-2-Codebeispiele/tree/master/PHP)
+* [C#](https://github.com/Omikron-Data-Quality-GmbH/DQ-Express-2-Codebeispiele/tree/master/C%23)
+* [Java](https://github.com/Omikron-Data-Quality-GmbH/DQ-Express-2-Codebeispiele/tree/master/Java)
+* [Javascript](https://github.com/Omikron-Data-Quality-GmbH/DQ-Express-2-Codebeispiele/tree/master/Javascript)
+* [PHP](https://github.com/Omikron-Data-Quality-GmbH/DQ-Express-2-Codebeispiele/tree/master/PHP)
 
 ## Verwendung
 
