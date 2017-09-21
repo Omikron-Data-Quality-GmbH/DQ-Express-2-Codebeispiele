@@ -20,7 +20,7 @@
 			$inputData->setFieldNames(array("<field names>"));
 			$inputData->setRecord(array("<record>"));
 
-			$result = $customerClient->executeModule("<module name>", $inputData, "<session id (optional>");
+			$result = $customerClient->executeModule("<module name>", $inputData, "<session id (optional)>");
 
 			var_dump($result);
 
